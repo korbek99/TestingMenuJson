@@ -40,7 +40,6 @@
 		571D8A43206C27B900096AA6 /* ViewControlMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D8A42206C27B900096AA6 /* ViewControlMenu.swift */; };
 		571D8A45206C400F00096AA6 /* ViewCrtOperarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D8A44206C400F00096AA6 /* ViewCrtOperarios.swift */; };
 		571D8A47206C40A400096AA6 /* DetailViewCrtOperarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D8A46206C40A400096AA6 /* DetailViewCrtOperarios.swift */; };
-		571D8A49206C42E600096AA6 /* TableViewCellD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D8A48206C42E600096AA6 /* TableViewCellD.swift */; };
 		A1225AF31E36E7190088B70E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1225AF21E36E7190088B70E /* DetailViewController.swift */; };
 		A15632501DF639A000D89B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156324F1DF639A000D89B16 /* AppDelegate.swift */; };
 		A15632521DF639A000D89B16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15632511DF639A000D89B16 /* ViewController.swift */; };
@@ -49,6 +48,7 @@
 		A156325A1DF639A000D89B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15632581DF639A000D89B16 /* LaunchScreen.storyboard */; };
 		A15632621DF666C400D89B16 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15632611DF666C400D89B16 /* TableViewCell.swift */; };
 		D90887222CAC449F00DB2226 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90887212CAC449F00DB2226 /* People.swift */; };
+		D90887252CAC6C7600DB2226 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90887242CAC6C7600DB2226 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,7 +85,6 @@
 		571D8A42206C27B900096AA6 /* ViewControlMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControlMenu.swift; sourceTree = "<group>"; };
 		571D8A44206C400F00096AA6 /* ViewCrtOperarios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCrtOperarios.swift; sourceTree = "<group>"; };
 		571D8A46206C40A400096AA6 /* DetailViewCrtOperarios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewCrtOperarios.swift; sourceTree = "<group>"; };
-		571D8A48206C42E600096AA6 /* TableViewCellD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellD.swift; sourceTree = "<group>"; };
 		A1225AF21E36E7190088B70E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A156324C1DF639A000D89B16 /* Trackers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trackers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A156324F1DF639A000D89B16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		A156325B1DF639A000D89B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15632611DF666C400D89B16 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D90887212CAC449F00DB2226 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		D90887242CAC6C7600DB2226 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +174,6 @@
 				A156325B1DF639A000D89B16 /* Info.plist */,
 				571D8A44206C400F00096AA6 /* ViewCrtOperarios.swift */,
 				571D8A46206C40A400096AA6 /* DetailViewCrtOperarios.swift */,
-				571D8A48206C42E600096AA6 /* TableViewCellD.swift */,
 			);
 			path = Trackers;
 			sourceTree = "<group>";
@@ -206,6 +205,7 @@
 		D908871D2CAC414500DB2226 /* Trackers */ = {
 			isa = PBXGroup;
 			children = (
+				D90887232CAC6C5F00DB2226 /* Map */,
 				D908871F2CAC416200DB2226 /* Details */,
 				D908871E2CAC415300DB2226 /* Cells */,
 				A15632511DF639A000D89B16 /* ViewController.swift */,
@@ -237,6 +237,14 @@
 				D90887212CAC449F00DB2226 /* People.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D90887232CAC6C5F00DB2226 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D90887242CAC6C7600DB2226 /* MapViewController.swift */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,9 +351,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15632621DF666C400D89B16 /* TableViewCell.swift in Sources */,
-				571D8A49206C42E600096AA6 /* TableViewCellD.swift in Sources */,
 				571D8A45206C400F00096AA6 /* ViewCrtOperarios.swift in Sources */,
 				571D8A47206C40A400096AA6 /* DetailViewCrtOperarios.swift in Sources */,
+				D90887252CAC6C7600DB2226 /* MapViewController.swift in Sources */,
 				D90887222CAC449F00DB2226 /* People.swift in Sources */,
 				571D8A06206B621D00096AA6 /* ViewContCheckin.swift in Sources */,
 				A15632521DF639A000D89B16 /* ViewController.swift in Sources */,

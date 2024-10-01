@@ -25,7 +25,7 @@ class TableViewCell: UITableViewCell {
         return label
     }()
     
-    private let dobLabel: UILabel = {
+    private let lastLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 14)
@@ -46,30 +46,30 @@ class TableViewCell: UITableViewCell {
     private func setupViews() {
         contentView.addSubview(imgView)
         contentView.addSubview(nameLabel)
-        contentView.addSubview(dobLabel)
+        contentView.addSubview(lastLabel)
         
       
         NSLayoutConstraint.activate([
             imgView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             imgView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            imgView.widthAnchor.constraint(equalToConstant: 50),
-            imgView.heightAnchor.constraint(equalToConstant: 50),
+            imgView.widthAnchor.constraint(equalToConstant: 150),
+            imgView.heightAnchor.constraint(equalToConstant: 150),
             
             nameLabel.leadingAnchor.constraint(equalTo: imgView.trailingAnchor, constant: 16),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             
-            dobLabel.leadingAnchor.constraint(equalTo: imgView.trailingAnchor, constant: 16),
-            dobLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            dobLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
-            dobLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            lastLabel.leadingAnchor.constraint(equalTo: imgView.trailingAnchor, constant: 16),
+            lastLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            lastLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
+            //lastLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
         ])
     }
     
-    func configure(with image: UIImage?, name: String, dob: String) {
+    public func configureItems(with image: UIImage?, name: String, dob: String) {
         imgView.image = image
         nameLabel.text = name
-        dobLabel.text = dob
+        lastLabel.text = dob
     }
 }
 

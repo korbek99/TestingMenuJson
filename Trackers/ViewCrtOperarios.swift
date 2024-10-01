@@ -88,16 +88,7 @@ class ViewCrtOperarios: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
-        cell.nameLabel.text = nameArray[indexPath.row]
-        cell.dobLabel.text = dobArray[indexPath.row]
-        
-        let imgURL = NSURL(string: imgURLArray[indexPath.row])
-        
-        if imgURL != nil {
-            let data = NSData(contentsOf: (imgURL as? URL)!)
-            cell.imgView.image = UIImage(data: data as! Data)
-        }
+        let cell = UITableViewCell()
         
         return cell
     }
@@ -105,12 +96,12 @@ class ViewCrtOperarios: UIViewController {
     ///for showing next detailed screen with the downloaded info
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        vc.imageString = imgURLArray[indexPath.row]
-        vc.nameString = nameArray[indexPath.row]
-        vc.dobString = dobArray[indexPath.row]
-        
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        vc.imageString = imgURLArray[indexPath.row]
+//        vc.nameString = nameArray[indexPath.row]
+//        vc.dobString = dobArray[indexPath.row]
+//        
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     

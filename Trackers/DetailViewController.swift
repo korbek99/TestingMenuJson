@@ -5,38 +5,76 @@
 //  Created by Shinkangsan on 1/23/17.
 //  Copyright © 2017 Sheldon. All rights reserved.
 //
-
 import UIKit
 
+@available(iOS 11.0, *)
 class DetailViewController: UIViewController {
-   
-    //current controller IBOutlets
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var dobLabel: UILabel!
 
-    //data from previous controller
-    var nameString:String!
-    var dobString:String!
-    var imageString:String!
-    
+
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.numberOfLines = 1
+        return label
+    }()
+
+    private let dobLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = .gray
+        label.numberOfLines = 1
+        return label
+    }()
+
+    var nameString: String!
+    var dobString: String!
+    var imageString: String!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.updateUI()
+        view.backgroundColor = .white
+        setupViews()
+        updateUI()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func setupViews() {
+        view.addSubview(imageView)
+        view.addSubview(nameLabel)
+        view.addSubview(dobLabel)
+
+       
+        NSLayoutConstraint.activate([
+            
+            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageView.widthAnchor.constraint(equalToConstant: 250),
+            imageView.heightAnchor.constraint(equalToConstant: 250),
+
+            
+            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 16),
+            nameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+           
+            dobLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+            dobLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
-    
+
+
     func updateUI() {
-        self.nameLabel.text = nameString
-        self.dobLabel.text = dobString
-        
-        let imgURL = URL(string:imageString)
-        
-        let data = NSData(contentsOf: (imgURL)!)
-        self.imageView.image = UIImage(data: data as! Data)
+        nameLabel.text = "Name : " + nameString
+        dobLabel.text = "Age : " +  dobString
+        imageView.image = UIImage(named: imageString)
     }
+
 }
