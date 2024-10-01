@@ -2,8 +2,8 @@
 //  People.swift
 //  Trackers
 //
-//  Created by Jose Preatorian on 01-10-24.
-//  Copyright © 2024 Sheldon. All rights reserved.
+//  Created by Jose David Bustos H on 28-03-18.
+//  Copyright © 2018 Sheldon. All rights reserved.
 //
 
 import Foundation

@@ -9,22 +9,67 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
-    @IBOutlet weak var imgView: UIImageView!
     
-    @IBOutlet weak var nameLabel: UILabel!
+    private let imgView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }()
     
-    @IBOutlet weak var dobLabel: UILabel!
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        return label
+    }()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private let dobLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .gray
+        return label
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupViews()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupViews()
     }
-
+    
+    private func setupViews() {
+        contentView.addSubview(imgView)
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(dobLabel)
+        
+      
+        NSLayoutConstraint.activate([
+            imgView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            imgView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            imgView.widthAnchor.constraint(equalToConstant: 50),
+            imgView.heightAnchor.constraint(equalToConstant: 50),
+            
+            nameLabel.leadingAnchor.constraint(equalTo: imgView.trailingAnchor, constant: 16),
+            nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            
+            dobLabel.leadingAnchor.constraint(equalTo: imgView.trailingAnchor, constant: 16),
+            dobLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            dobLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
+            dobLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+        ])
+    }
+    
+    func configure(with image: UIImage?, name: String, dob: String) {
+        imgView.image = image
+        nameLabel.text = name
+        dobLabel.text = dob
+    }
 }
+
