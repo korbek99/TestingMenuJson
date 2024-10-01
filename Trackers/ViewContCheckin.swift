@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import SystemConfiguration
 
+@available(iOS 13.0, *)
 class ViewContCheckin: UIViewController {
     
  
@@ -26,7 +27,7 @@ class ViewContCheckin: UIViewController {
         
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        activityIndicator.style = UIActivityIndicatorView.Style.gray
         view.addSubview(activityIndicator)
         
        // activityIndicator.startAnimating()

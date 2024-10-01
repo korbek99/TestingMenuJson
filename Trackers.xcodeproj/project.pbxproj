@@ -48,6 +48,7 @@
 		A15632571DF639A000D89B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A15632561DF639A000D89B16 /* Assets.xcassets */; };
 		A156325A1DF639A000D89B16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15632581DF639A000D89B16 /* LaunchScreen.storyboard */; };
 		A15632621DF666C400D89B16 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15632611DF666C400D89B16 /* TableViewCell.swift */; };
+		D90887222CAC449F00DB2226 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90887212CAC449F00DB2226 /* People.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		A15632591DF639A000D89B16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A156325B1DF639A000D89B16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15632611DF666C400D89B16 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D90887212CAC449F00DB2226 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,7 @@
 		A15632431DF6399F00D89B16 = {
 			isa = PBXGroup;
 			children = (
-				A156324E1DF639A000D89B16 /* JOSNSwiftDemo */,
+				A156324E1DF639A000D89B16 /* Trackers */,
 				A156324D1DF639A000D89B16 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -159,25 +161,82 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A156324E1DF639A000D89B16 /* JOSNSwiftDemo */ = {
+		A156324E1DF639A000D89B16 /* Trackers */ = {
 			isa = PBXGroup;
 			children = (
+				D90887202CAC448F00DB2226 /* Models */,
+				D908871C2CAC412700DB2226 /* LaunchScreen */,
+				D908871B2CAC411800DB2226 /* StoryBoard */,
+				D908871A2CAC410B00DB2226 /* Views */,
 				571D8A07206C213E00096AA6 /* img */,
 				A156324F1DF639A000D89B16 /* AppDelegate.swift */,
-				A15632511DF639A000D89B16 /* ViewController.swift */,
-				A15632611DF666C400D89B16 /* TableViewCell.swift */,
-				A1225AF21E36E7190088B70E /* DetailViewController.swift */,
-				A15632531DF639A000D89B16 /* Main.storyboard */,
 				A15632561DF639A000D89B16 /* Assets.xcassets */,
-				A15632581DF639A000D89B16 /* LaunchScreen.storyboard */,
 				A156325B1DF639A000D89B16 /* Info.plist */,
-				571D8A05206B621D00096AA6 /* ViewContCheckin.swift */,
-				571D8A42206C27B900096AA6 /* ViewControlMenu.swift */,
 				571D8A44206C400F00096AA6 /* ViewCrtOperarios.swift */,
 				571D8A46206C40A400096AA6 /* DetailViewCrtOperarios.swift */,
 				571D8A48206C42E600096AA6 /* TableViewCellD.swift */,
 			);
-			path = JOSNSwiftDemo;
+			path = Trackers;
+			sourceTree = "<group>";
+		};
+		D908871A2CAC410B00DB2226 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D908871D2CAC414500DB2226 /* Trackers */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D908871B2CAC411800DB2226 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				A15632531DF639A000D89B16 /* Main.storyboard */,
+			);
+			name = StoryBoard;
+			sourceTree = "<group>";
+		};
+		D908871C2CAC412700DB2226 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A15632581DF639A000D89B16 /* LaunchScreen.storyboard */,
+			);
+			name = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		D908871D2CAC414500DB2226 /* Trackers */ = {
+			isa = PBXGroup;
+			children = (
+				D908871F2CAC416200DB2226 /* Details */,
+				D908871E2CAC415300DB2226 /* Cells */,
+				A15632511DF639A000D89B16 /* ViewController.swift */,
+				571D8A05206B621D00096AA6 /* ViewContCheckin.swift */,
+			);
+			name = Trackers;
+			sourceTree = "<group>";
+		};
+		D908871E2CAC415300DB2226 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A15632611DF666C400D89B16 /* TableViewCell.swift */,
+				571D8A42206C27B900096AA6 /* ViewControlMenu.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		D908871F2CAC416200DB2226 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A1225AF21E36E7190088B70E /* DetailViewController.swift */,
+			);
+			name = Details;
+			sourceTree = "<group>";
+		};
+		D90887202CAC448F00DB2226 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D90887212CAC449F00DB2226 /* People.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +281,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -286,6 +346,7 @@
 				571D8A49206C42E600096AA6 /* TableViewCellD.swift in Sources */,
 				571D8A45206C400F00096AA6 /* ViewCrtOperarios.swift in Sources */,
 				571D8A47206C40A400096AA6 /* DetailViewCrtOperarios.swift in Sources */,
+				D90887222CAC449F00DB2226 /* People.swift in Sources */,
 				571D8A06206B621D00096AA6 /* ViewContCheckin.swift in Sources */,
 				A15632521DF639A000D89B16 /* ViewController.swift in Sources */,
 				A15632501DF639A000D89B16 /* AppDelegate.swift in Sources */,
@@ -414,11 +475,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 828LF57WA4;
-				INFOPLIST_FILE = JOSNSwiftDemo/Info.plist;
+				INFOPLIST_FILE = Trackers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TrackersPeoples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -427,11 +488,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 828LF57WA4;
-				INFOPLIST_FILE = JOSNSwiftDemo/Info.plist;
+				INFOPLIST_FILE = Trackers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TrackersPeoples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
