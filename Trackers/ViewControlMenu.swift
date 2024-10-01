@@ -150,6 +150,8 @@ extension ViewControlMenu: UITableViewDelegate, UITableViewDataSource {
         detailsVC.imageString = selectedPerson.profilePhoto
         detailsVC.nameString = selectedPerson.firstName + " " + selectedPerson.lastName
         detailsVC.dobString = "\(selectedPerson.age)"
+        detailsVC.latitude = selectedPerson.latitude
+        detailsVC.longitude = selectedPerson.longitude
         navigationController?.pushViewController(detailsVC, animated: true)
     }
 

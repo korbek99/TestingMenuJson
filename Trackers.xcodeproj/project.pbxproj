@@ -209,6 +209,7 @@
 				D908871F2CAC416200DB2226 /* Details */,
 				D908871E2CAC415300DB2226 /* Cells */,
 				A15632511DF639A000D89B16 /* ViewController.swift */,
+				571D8A42206C27B900096AA6 /* ViewControlMenu.swift */,
 				571D8A05206B621D00096AA6 /* ViewContCheckin.swift */,
 			);
 			name = Trackers;
@@ -218,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				A15632611DF666C400D89B16 /* TableViewCell.swift */,
-				571D8A42206C27B900096AA6 /* ViewControlMenu.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";

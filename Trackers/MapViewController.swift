@@ -30,7 +30,7 @@ class MapViewController: UIViewController {
     private func setupViews() {
         view.addSubview(mapView)
 
-        // Configurar Auto Layout para el mapView
+       
         NSLayoutConstraint.activate([
             mapView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             mapView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),

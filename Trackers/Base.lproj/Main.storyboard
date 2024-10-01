@@ -22,15 +22,18 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Details" id="B2s-lX-cpE"/>
+                    <connections>
+                        <segue destination="pca-kJ-oJK" kind="show" id="6vM-m4-Wnz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2957.5999999999999" y="105.69715142428787"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="I7J-h1-Y3V">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="pca-kJ-oJK" customClass="DetailViewController" customModule="Trackers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="pca-kJ-oJK" customClass="MapViewController" customModule="Trackers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Adc-1b-FxD"/>
                         <viewControllerLayoutGuide type="bottom" id="wdA-cq-eKD"/>
@@ -38,48 +41,9 @@
                     <view key="view" contentMode="scaleToFill" id="kFx-w8-p4j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e8x-C6-Y1g">
-                                <rect key="frame" x="67.5" y="76" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="oY0-EA-I5m"/>
-                                    <constraint firstAttribute="height" constant="128" id="vnW-0L-54K"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIS-6F-oa1">
-                                <rect key="frame" x="166.5" y="255" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="EG2-cd-N5z"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3O-mv-2mj">
-                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="jdi-OC-u7M"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="e8x-C6-Y1g" firstAttribute="top" secondItem="Adc-1b-FxD" secondAttribute="bottom" constant="56" id="9le-yu-h8E"/>
-                            <constraint firstItem="l3O-mv-2mj" firstAttribute="centerX" secondItem="kFx-w8-p4j" secondAttribute="centerX" id="Pst-Rs-LL5"/>
-                            <constraint firstItem="cIS-6F-oa1" firstAttribute="top" secondItem="e8x-C6-Y1g" secondAttribute="bottom" constant="51" id="aOb-4F-Ln8"/>
-                            <constraint firstItem="e8x-C6-Y1g" firstAttribute="centerX" secondItem="kFx-w8-p4j" secondAttribute="centerX" id="gJq-ZN-pPa"/>
-                            <constraint firstItem="cIS-6F-oa1" firstAttribute="centerX" secondItem="kFx-w8-p4j" secondAttribute="centerX" id="iMz-jM-3Lo"/>
-                            <constraint firstItem="l3O-mv-2mj" firstAttribute="top" secondItem="cIS-6F-oa1" secondAttribute="bottom" constant="47" id="tUb-Wa-VBR"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="dobLabel" destination="l3O-mv-2mj" id="HY5-j6-7ST"/>
-                        <outlet property="imageView" destination="e8x-C6-Y1g" id="gGt-VN-X0C"/>
-                        <outlet property="nameLabel" destination="cIS-6F-oa1" id="Bge-D0-FFP"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="ayV-dw-kfd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxR-T3-fe0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
