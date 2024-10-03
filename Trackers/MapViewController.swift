@@ -23,11 +23,13 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Map"
         setupViews()
         displayLocation()
     }
 
     private func setupViews() {
+        view.backgroundColor = .white
         view.addSubview(mapView)
 
        

@@ -57,12 +57,14 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        
+        title = "Details"
         setupViews()
         updateUI()
     }
 
     private func setupViews() {
+        view.backgroundColor = .white
         view.addSubview(imageView)
         view.addSubview(nameLabel)
         view.addSubview(dobLabel)
